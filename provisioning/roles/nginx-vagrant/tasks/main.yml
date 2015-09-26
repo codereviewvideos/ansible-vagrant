@@ -1,0 +1,3 @@
+---
+- name: Add Vagrant user to web user group
+  user: name=vagrant group={{ web_server_user }} append=yes

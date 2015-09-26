@@ -1,0 +1,30 @@
+---
+- hosts: lamp
+  sudo: true
+  gather_facts: true
+
+  vars:
+    user_name: lamp
+    web_server_user: www-data
+    zsh_theme: robbyrussell
+    vim_config:
+      - 'set syntax'
+      - 'set number'
+
+  roles:
+    - ssh
+    - users
+    - common
+    - ubuntu-unattended-upgrades
+    - ohmyzsh
+    - { role: timezone, timezone: "Europe/London" }
+    - vim
+    - fail2ban
+    - mysql
+    - php
+    - php-composer
+    - php-xdebug
+    - php-fpm
+    - nginx
+    - nginx-vagrant
+    - symfony

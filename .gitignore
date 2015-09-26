@@ -1,0 +1,12 @@
+# Misc
+.DS_Store
+
+
+# IDE 
+.idea/*
+*.iml
+.project
+
+
+# Vagrant specific
+/.vagrant
