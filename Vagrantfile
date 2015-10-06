@@ -24,7 +24,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # Ansible provisioner.
   config.vm.provision "ansible" do |ansible|
-    ansible.playbook = "provisioning/playbook.yml"
+    ansible.playbook = "provisioning/playbook.symfony.demo.yml"
+    # ansible.playbook = "provisioning/playbook.symfony.developer.yml"
+    # ansible.playbook = "provisioning/playbook.symfony.reference.restful_api.yml"
     ansible.inventory_path = "provisioning/inventory"
     ansible.sudo = true
   end

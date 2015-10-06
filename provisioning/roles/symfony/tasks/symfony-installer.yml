@@ -1,0 +1,16 @@
+---
+- name: Download the Symfony installer
+  action: "shell curl -L http://symfony.com/installer > /home/{{ user_name }}/symfony.phar"
+
+
+- name: Move Symfony installer to global location
+  action: "shell mv /home/{{ user_name }}/symfony.phar /usr/local/bin/symfony"
+
+
+- name: Set permissions on Symfony installer
+  action: shell chmod a+x /usr/local/bin/symfony
+
+
+- name: Check if Symfony site exists
+  stat: path=/var/www/{{ fqdn }}
+  register: check_symfony_site_exists
