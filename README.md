@@ -1,3 +1,5 @@
+# WIP
+
 ## Are you looking to get started with the Symfony 2 framework, but aren't sure how to start?
 
 "Getting to the bit where I can type some code" is probably the biggest barrier to entry in actually getting started for a beginner. 
